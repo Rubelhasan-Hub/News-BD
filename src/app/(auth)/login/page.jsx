@@ -2,6 +2,7 @@
 
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import Link from "next/link";
 
 export default function Basic() {
     const onSubmit = (e) => {
@@ -19,21 +20,6 @@ export default function Basic() {
 
     return (
         <Form className="flex w-3/10 flex-col gap-4 p-10 container mx-auto mt-30 border-4 border-gray-300 rounded-2xl shadow-md" onSubmit={onSubmit}>
-            <TextField
-                isRequired
-                name="name"
-                validate={(value) => {
-                    if (value.length < 3) {
-                        return "Name must be at least 3 characters";
-                    }
-                    return null;
-                }}
-            >
-                <Label>Name</Label>
-                <Input placeholder="Enter Your Name" />
-                <FieldError />
-            </TextField>
-
             <TextField
                 isRequired
                 name="email"
@@ -79,12 +65,13 @@ export default function Basic() {
             <div className="flex gap-2">
                 <Button type="submit">
                     <Check />
-                    Submit
+                    Login
                 </Button>
                 <Button type="reset" variant="secondary">
                     Reset
                 </Button>
             </div>
+            <div><h1 className="text-xl">Do not Have An Account ? <Link href="/register" className="text-red-500">Register</Link></h1></div>
         </Form>
     );
 }
