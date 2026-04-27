@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className='container mx-auto flex justify-end gap-100 items-center mt-10'>
             <div>
                 <ul  className='flex gap-4 text-xl'>
-                    <li><NavLinks href="/">Home</NavLinks></li>
+                    <li><NavLinks href="/category/01">Home</NavLinks></li>
                     <li><NavLinks href="/about">About</NavLinks></li>
                     <li><NavLinks href='/career'>Career</NavLinks></li>
                 </ul>
